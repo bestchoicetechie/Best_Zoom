@@ -99,7 +99,7 @@ const CallList = ({ type} : { type: 'ended' | 'upcoming' | 'recordings' }) => {
             handleClick= { type === 'recordings' ? () => router.push(`${meeting.url}`) : () => router
             .push(`/meeting/${meeting.id}`)}
             link= {type === 'recordings' ? meeting.url : `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meeting.id}`}
-            buttonText={ type === 'recording' ? 'Play' : 'Play'}
+            buttonText={ type === 'recordings' ? 'Play' : 'Start'}
         
             
             />

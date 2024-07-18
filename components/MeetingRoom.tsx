@@ -63,16 +63,16 @@ const MeetingRoom = () => {
         <div className="flex size-full max-w-[-1000px] items-center">
                 <CallLayout />
         </div>
-        <div className= {cn('h-[calc(100vh-86px)] hdden ml-2', { 'show-block': showParticipants, })}>
+        <div className= {cn('h-[calc(100vh-86px)] show-block ml-2', { 'hidden': showParticipants, })}>
 
-            <CallParticipantsList onClose={() => setShowParticipants(false)} />
+            <CallParticipantsList onClose={() => setShowParticipants(true)} />
 
         </div>
 
        </div>
        <div className='fixed bottom-0 flex w-full items-center justify-center gap-5 flex-wrap'>
             <CallControls onLeave={() => {
-                router.push("/")
+                router.push("")
             }} />
 
             <DropdownMenu>
